@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {Link} from 'react-router-dom'
+
 
 
 export class UserComponent extends Component {
@@ -17,7 +19,7 @@ export class UserComponent extends Component {
             {
                users.allUsers.map(user=>
                 <li key={user.id} className="list-group-item d-flex justify-content-between align-items-center">
-                    <a key={user.id} href="#" onClick={getPost.bind(this, user.id)}>{user.name}</a>
+                    <Link to={`/posts`} onClick={getPost.bind(this, user.id)} activeClassName="list-group-item list-group-item-action flex-column align-items-start active">{user.name}</Link>
                     <span className="badge badge-primary badge-pill">{user.id}</span>
                </li>
               )

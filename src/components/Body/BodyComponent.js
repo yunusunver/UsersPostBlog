@@ -20,11 +20,15 @@ export class BodyComponent extends Component {
 
   componentDidMount() {
     this.props.userList();
+    this.props.postList();
+    this.props.commentList();
   }
   
   componentDidUpdate(prevProps, prevState) {
     if (prevState.userNo !== this.state.userNo) {
       this.props.postList(this.state.userNo)
+    }
+    if (prevState.postNo !== this.state.postNo) {
       this.props.commentList(this.state.postNo);
     }
   }

@@ -13,12 +13,12 @@ export class CommentComponent extends Component {
       <div>
         {
           comments.allComment.map(comment=>
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">{comment.name}</h5>
+            <a href="#" className="list-group-item list-group-item-action flex-column align-items-start active">
+            <div className="d-flex w-100 justify-content-between">
+              <h5 className="mb-1">{comment.name}</h5>
               <small>{comment.postId}</small>
             </div>
-            <p class="mb-1">{comment.body}</p>
+            <p className="mb-1">{comment.body}</p>
             <small>{comment.email}</small>
           </a>  
           )
