@@ -17,7 +17,7 @@ export class BodyComponent extends Component {
       postNo:""
     }
   }
-
+  
   componentDidMount() {
     this.props.userList();
     this.props.postList();

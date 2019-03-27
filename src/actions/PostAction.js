@@ -31,3 +31,17 @@ export const postList=(userId)=>{
         }
     }
 }
+
+export const postSearch=(search)=>{
+    return dispatch => {
+        axios.get(`${API_BASE}/posts?title=${search}`)
+            .then(result=>result.data)
+                .then(result=>dispatch({
+                    type:GET_POST,
+                    payload:{
+                        allPost:result
+                    }
+                }
+            ))
+    }
+}
